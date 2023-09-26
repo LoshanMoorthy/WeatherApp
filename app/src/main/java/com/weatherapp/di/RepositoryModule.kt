@@ -14,10 +14,11 @@ import javax.inject.Singleton
 @ExperimentalCoroutinesApi
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class RepositoryModule{
+abstract class RepositoryModule {
+
     @Binds
     @Singleton
-    abstract fun bindLocationTracker(
+    abstract fun bindWeatherRepository(
         weatherRepositoryImpl: WeatherRepositoryImpl
     ): WeatherRepository
 }

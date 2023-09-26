@@ -19,9 +19,9 @@ class WeatherRepositoryImpl @Inject constructor(
                     long = long
                 ).toWeatherInfo()
             )
-        } catch (e: Exception) {
-            e.printStackTrace();
-            Resource.Error(e.message ?: "An unknown error occurred")
+        } catch(e: Exception) {
+            e.printStackTrace()
+            Resource.Error(e.message ?: "An unknown error occurred.")
         }
     }
 }
